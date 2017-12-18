@@ -33,28 +33,28 @@ public class RxSchedulersActivity extends RxBaseActivity {
                 .doOnNext(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Log.d(TAG, "accept: do on " + Thread.currentThread().getName());
+                        Log.d(TAG, s + " accept: do on " + Thread.currentThread().getName());
                     }
                 })
                 .subscribeOn(Schedulers.io())
                 .doOnNext(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Log.d(TAG, "accept: do on " + Thread.currentThread().getName());
+                        Log.d(TAG, s + " accept: do on " + Thread.currentThread().getName());
                     }
                 })
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnNext(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Log.d(TAG, "accept: do on " + Thread.currentThread().getName());
+                        Log.d(TAG, s + " accept: do on " + Thread.currentThread().getName());
                     }
                 })
                 .observeOn(Schedulers.io())
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Log.d(TAG, "accept: finish on " + Thread.currentThread().getName());
+                        Log.d(TAG, s + " accept: finish on " + Thread.currentThread().getName());
                     }
                 });
     }

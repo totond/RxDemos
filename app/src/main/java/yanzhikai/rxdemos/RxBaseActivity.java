@@ -1,5 +1,7 @@
 package yanzhikai.rxdemos;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import org.reactivestreams.Subscriber;
@@ -21,4 +23,9 @@ public class RxBaseActivity extends AppCompatActivity {
     protected Subscriber<String> mSubscriber;
     protected Consumer mConsumer;
 
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 }

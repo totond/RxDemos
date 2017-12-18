@@ -11,21 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_base"
-        android:text="base"
+        android:text="Base"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_schedulers"
-        android:text="schedulers"
+        android:text="Schedulers"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_maps"
-        android:text="schedulers"
+        android:text="Maps"
         />
 
 </LinearLayout>
