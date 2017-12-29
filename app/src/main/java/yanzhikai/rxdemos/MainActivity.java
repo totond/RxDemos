@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button btn_base,btn_schedulers,btn_maps;
+    private Button btn_base,btn_schedulers,btn_maps,btn_zips,btn_emit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_schedulers.setOnClickListener(this);
         btn_maps = (Button) findViewById(R.id.btn_maps);
         btn_maps.setOnClickListener(this);
+        btn_zips = (Button) findViewById(R.id.btn_zips);
+        btn_zips.setOnClickListener(this);
+        btn_emit = (Button) findViewById(R.id.btn_emit);
+        btn_emit.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_maps:
                 startActivity(new Intent(MainActivity.this,RxMapsActivity.class));
+                break;
+            case R.id.btn_zips:
+                startActivity(new Intent(MainActivity.this,RxZipActivity.class));
+                break;
+            case R.id.btn_emit:
+                startActivity(new Intent(MainActivity.this,RxEmitActivity.class));
                 break;
         }
     }

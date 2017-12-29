@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".RxBaseUseActivity" />
         <activity android:name=".RxSchedulersActivity" />
-        <activity android:name=".RxMapsActivity"></activity>
+        <activity android:name=".RxMapsActivity" />
+        <activity android:name=".RxZipActivity" />
+        <activity android:name=".RxEmitActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 
 public class RxBaseUseActivity extends RxBaseActivity {
@@ -26,6 +27,27 @@ public class RxBaseUseActivity extends RxBaseActivity {
         observerTest();
 //        subscriberTest();
         mObservable.subscribe(mObserver);
+//        mObservable.subscribe(new Consumer<String>() {
+//            @Override
+//            public void accept(String s) throws Exception {
+//
+//            }
+//        }, new Consumer<Throwable>() {
+//            @Override
+//            public void accept(Throwable throwable) throws Exception {
+//
+//            }
+//        }, new Consumer<Action>() {
+//            @Override
+//            public void accept(Action action) throws Exception {
+//
+//            }
+//        }, new Consumer<Disposable>() {
+//            @Override
+//            public void accept(Disposable disposable) throws Exception {
+//
+//            }
+//        });
     }
 
     private void observableTest1(){
